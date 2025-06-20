@@ -1,0 +1,35 @@
+[
+  {
+    "context": "new gourmet coffee shop opening",
+    "platform": "Instagram",
+    "audience": "coffee lovers, young professionals",
+    "tone": "cozy, inviting",
+    "cta": "Visit Us!",
+    "include_emojis": true,
+    "include_hashtags": true,
+    "word_limit": 50,
+    "ad_output_json": "{\"headline\": \"Your New Coffee Obsession Awaits! ✨\", \"text\": \"Experience the rich aroma and exquisite taste at our brand new gourmet coffee shop. Perfect for your morning boost or a cozy afternoon break. Get ready to indulge!\", \"call_to_action\": \"Brewing Soon! Follow for Updates!\", \"emojis\": [\"☕\", \"🌟\", \"🍂\"], \"hashtags\": [\"#NewCoffeeShop\", \"#CoffeeLover\", \"#GourmetCoffee\", \"#ComingSoon\"]}"
+  },
+  {
+    "context": "high-performance gaming laptop",
+    "platform": "Twitter",
+    "audience": "hardcore gamers",
+    "tone": "powerful, cutting-edge",
+    "cta": "Shop Now",
+    "include_emojis": true,
+    "include_hashtags": true,
+    "word_limit": 40,
+    "ad_output_json": "{\"headline\": \"Dominate Every Game! 🚀\", \"text\": \"Unleash ultimate power with our new gaming laptop. Blazing fast, stunning graphics. Your next victory starts here.\", \"call_to_action\": \"Conquer Your Competition!\", \"emojis\": [\"🎮\", \"🔥\", \"⚡\"], \"hashtags\": [\"#GamingLaptop\", \"#GamerLife\", \"#HighPerformance\", \"#EsportsReady\"]}"
+  },
+  {
+    "context": "eco-friendly cleaning product",
+    "platform": "Facebook",
+    "audience": "environmentally conscious households",
+    "tone": "responsible, effective",
+    "cta": "Learn More",
+    "include_emojis": true,
+    "include_hashtags": true,
+    "word_limit": 60,
+    "ad_output_json": "{\"headline\": \"Clean Green, Live Clean! 🌱\", \"text\": \"Make a difference with every sparkle! Our new eco-friendly cleaner tackles grime powerfully, without harming the planet. Safe for your home, safe for Earth.\", \"call_to_action\": \"Go Green With Us!\", \"emojis\": [\"🌍\", \"✨\", \"💧\"], \"hashtags\": [\"#EcoFriendly\", \"#GreenCleaning\", \"#SustainableLiving\", \"#CleanHome\"]}"
+  }
+]
