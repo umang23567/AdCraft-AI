@@ -36,7 +36,7 @@ model = init_chat_model (
 parser = JsonOutputParser(pydantic_object=SocialMediaAd)
 
 chat_prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a highly creative and engaging social media ad generator. Your output MUST be in JSON format. Always use relevant emojis and hashtags."),
+    ("system", "You are a highly creative and engaging social media ad generator. Your output must be in JSON format. Always use relevant emojis and hashtags."),
     ("human", """
     Generate a catchy ad based on the provided specifications.
     The output should be a JSON object with the following keys:
