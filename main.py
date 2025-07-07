@@ -8,7 +8,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import JsonOutputParser
 from pydantic import BaseModel, Field
 
-# Pydantic Model Definition
+# Pydantic model definition
+# Stucture of generated output
 class SocialMediaAd(BaseModel):
     headline: str = Field(description="A catchy headline for the social media ad")
     text: str = Field(description="The main body text of the social media ad")
@@ -20,7 +21,7 @@ class SocialMediaAd(BaseModel):
 
 # Load API Key
 def load_api_key():
-    load_dotenv()
+    load_dotenv()       # Load api from .env
     if not os.environ.get("GOOGLE_API_KEY"):
         os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter API key for Google Gemini: ")
 
@@ -45,8 +46,12 @@ def load_few_shot_examples(file_path="examples.json"):
 # Get and process user input
 def get_user_ad_specs():
     print("Enter your ad specifications as a JSON string. Include as much detail as possible for a better ad.")
-    # Updated example string to reflect reduced inputs
-    print("Example: {\"context\": \"new coffee shop\", \"platform\": \"Instagram\", \"audience\": \"young adults\", \"location\": \"Street-1\", \"contact_details\": \"9999999999\", \"tone\": \"exciting\", \"cta\": \"Visit us!\", \"include_emojis\": true, \"include_hashtags\": true, \"word_limit\": 50, \"product_name\": \"Daily Grind Coffee\", \"product_description\": \"A cozy new coffee shop serving artisanal blends and pastries.\", \"location\": \"Downtown Main Street\", \"campaign_goal\": \"Increase foot traffic and brand awareness.\", \"desired_emotion\": \"Cozy and inviting.\", \"keywords_to_include\": \"fresh, local, community\"}")
+    print("Example: {\"context\": \"new coffee shop\", \"platform\": \"Instagram\", \"audience\": "
+          "\"young adults\", \"location\": \"Street-1\", \"contact_details\": \"9999999999\", \"tone\": \"exciting\","
+          "\"cta\": \"Visit us!\", \"include_emojis\": true, \"include_hashtags\": true, \"word_limit\": 50,"
+          "\"product_name\": \"Daily Grind Coffee\", \"product_description\": \"A cozy new coffee shop serving artisanal blends and pastries.\","
+          "\"location\": \"Downtown Main Street\", \"campaign_goal\": \"Increase foot traffic and brand awareness.\","
+          "\"desired_emotion\": \"Cozy and inviting.\", \"keywords_to_include\": \"fresh, local, community\"}")
     json_input_string = input("JSON Input: ")
 
     try:
@@ -55,14 +60,14 @@ def get_user_ad_specs():
         print(f"ERROR: Invalid JSON input provided. Please ensure your input is a valid JSON string. Details: {e}")
         exit()
 
-    # Process optional list inputs (convert comma-separated string to list)
     input_data["keywords_to_include"] = [kw.strip() for kw in input_data.get("keywords_to_include", "").split(',') if kw.strip()]
-    # Removed processing for keywords_to_avoid, character_limit_headline, character_limit_text
+    # Convert keywords to list
     
     return input_data
 
 # Initialize LLM and Chain
 def setup_llm_chain(examples, parser):
+    
     llm_settings = { "temperature": 0.7, "max_output_tokens": 512, "top_k": 40,  "top_p": 0.95 }
     model = ChatGoogleGenerativeAI (
       model="gemini-2.0-flash",
@@ -70,6 +75,7 @@ def setup_llm_chain(examples, parser):
       max_output_tokens=llm_settings["max_output_tokens"]
     )
 
+    # Template for each example
     example_formatter_template = ChatPromptTemplate.from_messages(
         [
             HumanMessage(content="Generate a catchy ad based on the provided specifications:\n"
@@ -87,11 +93,12 @@ def setup_llm_chain(examples, parser):
                                 "- Location: '{location}'\n"
                                 "- Campaign Goal: '{campaign_goal}'\n"
                                 "- Desired Emotion: '{desired_emotion}'\n"
-                                "- Keywords to Include: '{keywords_to_include}'"), # Kept only specified fields
+                                "- Keywords to Include: '{keywords_to_include}'"), 
             AIMessage(content="{ad_output_json}"),
         ]
     )
 
+    # Plug in few shot examples
     few_shot_prompt = FewShotChatMessagePromptTemplate(
         example_prompt=example_formatter_template,
         examples=examples,
@@ -103,8 +110,13 @@ def setup_llm_chain(examples, parser):
         ],
     )
 
+    # Main chat prompt template
     chat_prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are a highly creative and engaging social media ad generator. Your output MUST be in JSON format. Always use relevant emojis and hashtags. Pay close attention to all provided specifications, including product details, campaign goals, and emotional tone. Adhere strictly to character limits for headline and text if provided."),
+        ("system", "You are a highly creative and engaging social media ad generator. "
+         "Your output MUST be in JSON format."
+         "Always use relevant emojis and hashtags. "
+         "Pay close attention to all provided specifications, including product details, "
+         "campaign goals, and emotional tone. Adhere strictly to character limits for headline and text if provided."),
         few_shot_prompt,
         ("human", """
         Generate a catchy ad based on the provided specifications.
@@ -119,22 +131,24 @@ def setup_llm_chain(examples, parser):
         {format_instructions}
         """)
     ])
+    
+    # Return full chain
     return chat_prompt | model | parser
 
-# Call the fnc and print ad
+# Ad Output formatting
 def print_ad(ad_output_json):
     print(ad_output_json)
     print("\n--- Generated Social Media Ad ---")
     formatted_output = f"""
-✨ Social Media Ad ✨
+     ✨ Social Media Ad ✨
 
-Headline: {ad_output_json.get('headline', 'N/A')}
-Text: {ad_output_json.get('text', 'N/A')}
-Call to Action: {ad_output_json.get('call_to_action', 'N/A')}
-Emojis: {' '.join(ad_output_json.get('emojis', []))}
-Hashtags: {' '.join(ad_output_json.get('hashtags', []))}
-Location: {ad_output_json.get('location', 'N/A')}
-"""
+    Headline: {ad_output_json.get('headline', 'N/A')}
+    Text: {ad_output_json.get('text', 'N/A')}
+    Call to Action: {ad_output_json.get('call_to_action', 'N/A')}
+    Emojis: {' '.join(ad_output_json.get('emojis', []))}
+    Hashtags: {' '.join(ad_output_json.get('hashtags', []))}
+    Location: {ad_output_json.get('location', 'N/A')}
+    """
     print(formatted_output)
 
 # Main execution block
@@ -143,21 +157,17 @@ if __name__ == "__main__":
 
     examples = load_few_shot_examples()
 
-    # Initialize parser here as it's needed for format_instructions
     parser = JsonOutputParser(pydantic_object=SocialMediaAd)
 
     chain = setup_llm_chain(examples, parser)
 
     input_data = get_user_ad_specs()
 
-    # Add format instructions right before invoking the chain
     input_data["format_instructions"] = parser.get_format_instructions()
-
 
     try:
         ad_output_json = chain.invoke(input_data)
-        # Directly print the Pydantic object for debugging, then formatted
-        # print(ad_output_json) # You can keep this for raw object inspection
         print_ad(ad_output_json)
-    except Exception as e: # Catch any remaining errors during invocation
+        
+    except Exception as e: 
         print(f"An error occurred during LLM invocation: {e}")
