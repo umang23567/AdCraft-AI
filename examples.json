@@ -11,10 +11,20 @@
     "product_name": "The Daily Grind Coffee",
     "product_description": "A cozy new coffee shop serving artisanal blends and pastries.",
     "location": "Sector 18, Noida",
+    "phone": "9876543210",
     "campaign_goal": "Increase foot traffic and brand awareness.",
     "desired_emotion": "Cozy and inviting.",
     "keywords_to_include": "fresh, local, community",
-    "ad_output_json": "{\"headline\": \"Your New Coffee Obsession Awaits! ✨\", \"text\": \"Experience the rich aroma and exquisite taste at our brand new gourmet coffee shop. Perfect for your morning boost or a cozy afternoon break. Get ready to indulge!\", \"call_to_action\": \"Brewing Soon! Follow for Updates!\", \"emojis\": [\"☕\", \"🌟\", \"🍂\"], \"hashtags\": [\"#NewCoffeeShop\", \"#CoffeeLover\", \"#NoidaEats\", \"#Sector18\"], \"location\": \"Sector 18, Noida\"}"
+    "contact_details": "9876543210",
+    "ad_output_json": {
+      "headline": "Your New Coffee Obsession Awaits! ✨",
+      "text": "Experience the rich aroma and exquisite taste at our brand new gourmet coffee shop. Perfect for your morning boost or a cozy afternoon break. Get ready to indulge!",
+      "call_to_action": "Brewing Soon! Follow for Updates!",
+      "emojis": ["☕", "🌟", "🍂"],
+      "hashtags": ["#NewCoffeeShop", "#CoffeeLover", "#NoidaEats", "#Sector18"],
+      "location": "Sector 18, Noida",
+      "contact_details": "9876543210"
+    }
   },
   {
     "context": "new online fitness program",
@@ -28,10 +38,20 @@
     "product_name": "FitFromHome Challenge",
     "product_description": "A 30-day online fitness program with daily video workouts, personalized meal plans, and a supportive community, designed for all fitness levels.",
     "location": "Online Platform",
+    "phone": "9998887776",
     "campaign_goal": "Increase free trial sign-ups.",
     "desired_emotion": "Inspired, confident, energized.",
     "keywords_to_include": "home workout, convenient fitness, transform body",
-    "ad_output_json": "{\"headline\": \"Transform Your Body at Home! 💪\", \"text\": \"No gym? No problem! Join our 30-day FitFromHome Challenge. Daily workouts, meal plans & a supportive community. Get fit, feel great!\", \"call_to_action\": \"Start Your Free Trial Today!\", \"emojis\": [\"🏡\", \"🔥\", \"✨\"], \"hashtags\": [\"#HomeWorkout\", \"#FitnessChallenge\", \"#NoExcuses\", \"#FitLife\"], \"location\": \"Online\"}"
+    "contact_details": "9998887776",
+    "ad_output_json": {
+      "headline": "Transform Your Body at Home! 💪",
+      "text": "No gym? No problem! Join our 30-day FitFromHome Challenge. Daily workouts, meal plans & a supportive community. Get fit, feel great!",
+      "call_to_action": "Start Your Free Trial Today!",
+      "emojis": ["🏡", "🔥", "✨"],
+      "hashtags": ["#HomeWorkout", "#FitnessChallenge", "#NoExcuses", "#FitLife"],
+      "location": "Online",
+      "contact_details": "9998887776"
+    }
   },
   {
     "context": "new smartwatch launch",
@@ -45,10 +65,20 @@
     "product_name": "Apex Pulse Smartwatch",
     "product_description": "A cutting-edge smartwatch with advanced health tracking, long battery life, and seamless smartphone integration.",
     "location": "Available online & electronics stores",
+    "phone": "9123456780",
     "campaign_goal": "Drive pre-orders and generate buzz.",
     "desired_emotion": "Excitement, modern, informed.",
     "keywords_to_include": "smartwatch, fitness tracker, new tech, health monitoring",
-    "ad_output_json": "{\"headline\": \"Future on Your Wrist: Apex Pulse! ⌚️🚀\", \"text\": \"Experience the new Apex Pulse Smartwatch. Track your health, stay connected, and conquer your day. Sleek design, smart features!\", \"call_to_action\": \"Discover Apex Pulse!\", \"emojis\": [\"🔋\", \"💙\", \"📊\"], \"hashtags\": [\"#Smartwatch\", \"#WearableTech\", \"#FitnessGadget\", \"#ApexPulse\"], \"location\": \"Online & Retailers\"}"
+    "contact_details": "9123456780",
+    "ad_output_json": {
+      "headline": "Future on Your Wrist: Apex Pulse! ⌚️🚀",
+      "text": "Experience the new Apex Pulse Smartwatch. Track your health, stay connected, and conquer your day. Sleek design, smart features!",
+      "call_to_action": "Discover Apex Pulse!",
+      "emojis": ["🔋", "💙", "📊"],
+      "hashtags": ["#Smartwatch", "#WearableTech", "#FitnessGadget", "#ApexPulse"],
+      "location": "Online & Retailers",
+      "contact_details": "9123456780"
+    }
   },
   {
     "context": "promotion for reusable grocery bags",
@@ -62,9 +92,19 @@
     "product_name": "EcoCarry Reusable Bags",
     "product_description": "Durable, stylish, and spacious reusable grocery bags made from recycled materials. Help reduce plastic waste with every shop!",
     "location": "SuperGreen Online Store",
+    "phone": "9001112233",
     "campaign_goal": "Increase sales and promote eco-friendly habits.",
     "desired_emotion": "Responsibility, pride, convenience.",
     "keywords_to_include": "reusable, eco-friendly, plastic-free, sustainable shopping",
-    "ad_output_json": "{\"headline\": \"Say NO to Plastic! Grab Your EcoCarry Bags! 🌍🛍️\", \"text\": \"Shop smart & sustainably with EcoCarry! Our durable, stylish bags make going green easy. Join the movement for a plastic-free future!\", \"call_to_action\": \"Get Your EcoBags!\", \"emojis\": [\"🌱\", \"🛒\", \"💚\"], \"hashtags\": [\"#EcoFriendly\", \"#ReusableBags\", \"#GoGreen\", \"#SustainableLiving\"], \"location\": \"Online\"}"
+    "contact_details": "9001112233",
+    "ad_output_json": {
+      "headline": "Say NO to Plastic! Grab Your EcoCarry Bags! 🌍🛍️",
+      "text": "Shop smart & sustainably with EcoCarry! Our durable, stylish bags make going green easy. Join the movement for a plastic-free future!",
+      "call_to_action": "Get Your EcoBags!",
+      "emojis": ["🌱", "🛒", "💚"],
+      "hashtags": ["#EcoFriendly", "#ReusableBags", "#GoGreen", "#SustainableLiving"],
+      "location": "Online",
+      "contact_details": "9001112233"
+    }
   }
 ]
