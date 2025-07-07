@@ -4,7 +4,7 @@ import getpass
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
 from langchain_core.messages import HumanMessage, AIMessage
-from langchain.chat_models import init_chat_model
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import JsonOutputParser
 from pydantic import BaseModel, Field
 
@@ -16,6 +16,7 @@ class SocialMediaAd(BaseModel):
     emojis: list[str] = Field(description="A list of relevant emojis for the ad")
     hashtags: list[str] = Field(description="A list of relevant hashtags for the ad")
     location: str = Field(description="The geographical location relevant to the ad, e.g., 'Downtown Main Street', 'Online'")
+    contact_details: str= Field(description="The contact details of company publishing the ad.")
 
 # Load API Key
 def load_api_key():
@@ -45,7 +46,7 @@ def load_few_shot_examples(file_path="examples.json"):
 def get_user_ad_specs():
     print("Enter your ad specifications as a JSON string. Include as much detail as possible for a better ad.")
     # Updated example string to reflect reduced inputs
-    print("Example: {\"context\": \"new coffee shop\", \"platform\": \"Instagram\", \"audience\": \"young adults\", \"tone\": \"exciting\", \"cta\": \"Visit us!\", \"include_emojis\": true, \"include_hashtags\": true, \"word_limit\": 50, \"product_name\": \"Daily Grind Coffee\", \"product_description\": \"A cozy new coffee shop serving artisanal blends and pastries.\", \"location\": \"Downtown Main Street\", \"campaign_goal\": \"Increase foot traffic and brand awareness.\", \"desired_emotion\": \"Cozy and inviting.\", \"keywords_to_include\": \"fresh, local, community\"}")
+    print("Example: {\"context\": \"new coffee shop\", \"platform\": \"Instagram\", \"audience\": \"young adults\", \"location\": \"Street-1\", \"contact_details\": \"9999999999\", \"tone\": \"exciting\", \"cta\": \"Visit us!\", \"include_emojis\": true, \"include_hashtags\": true, \"word_limit\": 50, \"product_name\": \"Daily Grind Coffee\", \"product_description\": \"A cozy new coffee shop serving artisanal blends and pastries.\", \"location\": \"Downtown Main Street\", \"campaign_goal\": \"Increase foot traffic and brand awareness.\", \"desired_emotion\": \"Cozy and inviting.\", \"keywords_to_include\": \"fresh, local, community\"}")
     json_input_string = input("JSON Input: ")
 
     try:
@@ -63,9 +64,8 @@ def get_user_ad_specs():
 # Initialize LLM and Chain
 def setup_llm_chain(examples, parser):
     llm_settings = { "temperature": 0.7, "max_output_tokens": 512, "top_k": 40,  "top_p": 0.95 }
-    model = init_chat_model (
-      "gemini-2.0-flash",
-      model_provider="google_genai",
+    model = ChatGoogleGenerativeAI (
+      model="gemini-2.0-flash",
       temperature=llm_settings["temperature"],
       max_output_tokens=llm_settings["max_output_tokens"]
     )
@@ -76,6 +76,7 @@ def setup_llm_chain(examples, parser):
                                 "- Context: '{context}'\n"
                                 "- Platform: '{platform}'\n"
                                 "- Audience: '{audience}'\n"
+                                "- Contact details: '{contact_details}'\n"
                                 "- Tone: '{tone}'\n"
                                 "- Call to Action: '{cta}'\n"
                                 "- Include Emojis: {include_emojis}\n"
@@ -95,10 +96,10 @@ def setup_llm_chain(examples, parser):
         example_prompt=example_formatter_template,
         examples=examples,
         input_variables=[
-            "context", "platform", "audience", "tone", "cta",
+            "context", "platform", "audience", "contact_details", "tone", "cta",
             "include_emojis", "include_hashtags", "word_limit",
             "product_name", "product_description", "location",
-            "campaign_goal", "desired_emotion", "keywords_to_include" # Kept only specified fields
+            "campaign_goal", "desired_emotion", "keywords_to_include" 
         ],
     )
 
@@ -114,6 +115,7 @@ def setup_llm_chain(examples, parser):
         - `emojis`: An array of emojis to be used.
         - `hashtags`: An array of hashtags to be used.
         - `location`: The geographical location relevant to the ad.
+        - `contact details`: The contact details of company publishing the ad.
         {format_instructions}
         """)
     ])
@@ -121,24 +123,19 @@ def setup_llm_chain(examples, parser):
 
 # Call the fnc and print ad
 def print_ad(ad_output_json):
+    print(ad_output_json)
     print("\n--- Generated Social Media Ad ---")
     formatted_output = f"""
 ✨ Social Media Ad ✨
 
 Headline: {ad_output_json.get('headline', 'N/A')}
---------------------------------------------------
 Text: {ad_output_json.get('text', 'N/A')}
---------------------------------------------------
 Call to Action: {ad_output_json.get('call_to_action', 'N/A')}
---------------------------------------------------
 Emojis: {' '.join(ad_output_json.get('emojis', []))}
---------------------------------------------------
 Hashtags: {' '.join(ad_output_json.get('hashtags', []))}
---------------------------------------------------
 Location: {ad_output_json.get('location', 'N/A')}
 """
     print(formatted_output)
-    print("-----------------------------------\n")
 
 # Main execution block
 if __name__ == "__main__":
