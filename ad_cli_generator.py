@@ -138,7 +138,7 @@ def setup_llm_chain(examples, parser):
 # Ad Output formatting
 def print_ad(ad_output_json):
     print(ad_output_json)
-    print("\n--- Generated Social Media Ad ---")
+    # print("\n--- Generated Social Media Ad ---")
     formatted_output = f"""
      ✨ Social Media Ad ✨
 
@@ -148,6 +148,7 @@ def print_ad(ad_output_json):
     Emojis: {' '.join(ad_output_json.get('emojis', []))}
     Hashtags: {' '.join(ad_output_json.get('hashtags', []))}
     Location: {ad_output_json.get('location', 'N/A')}
+    Contact: {ad_output_json.get('contact_details', 'N/A')}
     """
     print(formatted_output)
 
@@ -166,6 +167,7 @@ if __name__ == "__main__":
     input_data["format_instructions"] = parser.get_format_instructions()
 
     try:
+        print("Generating ad....")
         ad_output_json = chain.invoke(input_data)
         print_ad(ad_output_json)
         
