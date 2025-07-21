@@ -65,8 +65,16 @@ pip install -r requirements.txt
 
 ### 3. Set your API key
 
-Create a `.env` file with your Gemini API key:
-
+1. Create the .streamlit directory
+```
+mkdir -p .streamlit
+```
+3. Create the secrets.toml file
+```
+nano .streamlit/secrets.toml
+```
+5. Add your Gemini API key to the file
+Paste the following into secrets.toml:
 ```
 GOOGLE_API_KEY=your_google_gemini_api_key
 ```
