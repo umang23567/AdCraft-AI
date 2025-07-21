@@ -6,16 +6,16 @@
 
 ## ✨ Features
 
-* 🔥 **AI-Powered Ad Generation** using Google Gemini via LangChain
-* 🎨 **Customizable Ad Styling** (Fonts, Colors, Gradient/Solid/Image Backgrounds)
-* 📝 **Structured JSON Output** using Pydantic models
-* 🖌️ **Text Overlay Rendering** for headlines, body, CTA, hashtags, and contact info
-* 📥 **Downloadable Image Ad**
-* ✅ **Session-Aware Interface** with auto-reset on form changes
+* AI-Powered Ad Generation** using Google Gemini via LangChain
+* Customizable Ad Styling** (Fonts, Colors, Gradient/Solid/Image Backgrounds)
+* Structured JSON Output** using Pydantic models
+* Text Overlay Rendering** for headlines, body, CTA, hashtags, and contact info
+* Downloadable Image Ad**
+* Session-Aware Interface** with auto-reset on form changes
 
 ---
 
-## 📦 Folder Structure
+## 📂 Folder Structure
 
 ```
 adcraft-ai/
@@ -98,14 +98,21 @@ streamlit run app.py
    Generated styled backgrounds and overlayed the ad text using PIL.
 ---
 
-## 🛠️ Current issues
+## 🐛 Known issues
 
-* Clear/Reset does not reset the form fields
+-  **Reset Button Limitation**  
+  The "Reset/Clear" button does not fully reset all form fields. Users need to manually refresh the page to start fresh.
+
+-  **Text Formatting Challenges**  
+  Due to unpredictable LLM output and variable word limits, precise text positioning and layout control is limited.
+
+-  **Limited Background Suitability**  
+  The available solid/gradient/image background options may not be visually optimal for every ad scenario.
 
 ---
 
 
-## 🛠️ Future Roadmap
+## 🛤️  Future Roadmap
 
 * Support multiple ad variants generation (A/B testing)
 * Export ads as PDF or ready-to-post social media kits
