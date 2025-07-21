@@ -1,6 +1,4 @@
-import os
 import json
-import getpass
 from dotenv import load_dotenv
 import streamlit as st
 
