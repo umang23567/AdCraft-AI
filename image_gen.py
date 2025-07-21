@@ -167,7 +167,7 @@ def overlay_txt(ad, img, fill, font_path,
     contact_blocks = [
         ("We are located at " + location, contact_font),
         ("Contact us at " + phone + " or " + email, contact_font),
-        ("Visit us: " + website, contact_font),
+        ("Visit our website: " + website, contact_font),
     ]
     contact_height = sum(
         measure_block_height(text, font, max_width, spacing=contact_spacing)
