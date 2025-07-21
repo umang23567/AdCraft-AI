@@ -111,7 +111,7 @@ streamlit run app.py
 
 - **Minimal Error Handling**  
   Although the code is generally robust, detailed error handling hasn't been implemented.
-  In rare cases, unexpected inputs or failures (e.g., LLM/API/image issues) may cause errors.
+  In rare cases, unexpected errors or failures (e.g., LLM/API/image issues) may happen.
 
 ---
 
