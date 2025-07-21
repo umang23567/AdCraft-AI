@@ -53,7 +53,7 @@ adcraft-ai/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/adcraft-ai.git
+git clone https://github.com/umang23567/adcraft-ai.git
 cd adcraft-ai
 ```
 
