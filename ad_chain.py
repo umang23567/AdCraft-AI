@@ -2,6 +2,7 @@ import os
 import json
 import getpass
 from dotenv import load_dotenv
+import streamlit as st
 
 from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
 # from langchain_core.messages import HumanMessage, AIMessage
