@@ -96,6 +96,7 @@ def setup_llm_chain(temp=0.7):
                 "Limit the headline to a maximum of 25 characters, including spaces and punctuation."
                 "Use the given keywords to include."
                 "Ensure the main body text is as close as possible to the given word limit."
+                "Do not include call to action in main text body."
                 "There are few examples that you can consider before generating the output. "),
 
         
