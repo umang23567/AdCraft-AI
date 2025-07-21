@@ -1,67 +1,67 @@
-Here’s a complete and clean `README.md` for your **AdCraft AI** project:
+Sure! Here's the direct markdown-formatted text for your `README.md` file:
 
 ---
 
-```markdown
 # 🖼️ AdCraft AI
 
 **AdCraft AI** is a Streamlit-powered application that allows users to generate visually stunning, personalized **social media advertisements** with the help of **Google Gemini (via LangChain)** and overlay the generated content onto custom-styled image backgrounds.
 
+---
+
 ## ✨ Features
 
-- 🔥 **AI-Powered Ad Generation** using Google Gemini (via LangChain)
-- 🎨 **Customizable Ad Styling** (Fonts, Colors, Gradient/Solid/Image Backgrounds)
-- 📝 **JSON-structured Ad Output** using Pydantic for precision and reliability
-- 🖌️ **Text Overlay Rendering** with headline, body text, CTA, hashtags, and contact info
-- 📥 **Downloadable Ad Image**
-- ✅ **Session-State Aware** to prevent unnecessary recomputations
+* 🔥 **AI-Powered Ad Generation** using Google Gemini via LangChain
+* 🎨 **Customizable Ad Styling** (Fonts, Colors, Gradient/Solid/Image Backgrounds)
+* 📝 **Structured JSON Output** using Pydantic models
+* 🖌️ **Text Overlay Rendering** for headlines, body, CTA, hashtags, and contact info
+* 📥 **Downloadable Image Ad**
+* ✅ **Session-Aware Interface** with auto-reset on form changes
 
 ---
 
 ## 📦 Folder Structure
 
 ```
-
 adcraft-ai/
 │
-├── app.py                # Streamlit UI app
-├── ad\_chain.py           # LangChain + Pydantic based ad generation
-├── image\_gen.py          # Image/text styling and overlay rendering
-├── examples.json         # Few-shot examples for better LLM generation
-├── .env                  # Store GOOGLE\_API\_KEY here
-├── fonts/                # Custom font files used in the app
-│   ├── Arial.ttf
+├── app.py                # Streamlit UI logic
+├── ad_chain.py           # LangChain-based ad generation
+├── image_gen.py          # Image rendering and text overlay
+├── examples.json         # Few-shot examples to guide LLM
+├── .env                  # Google Gemini API key (not shared)
+├── fonts/                # Font files
 │   ├── Anton-Regular.ttf
+│   ├── Pacifico-Regular.ttf
 │   └── ...
 └── requirements.txt      # Python dependencies
-
-````
+```
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the Repository
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/adcraft-ai.git
 cd adcraft-ai
-````
+```
 
-### 2. Install Dependencies
+### 2. Install Python dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Set Your API Key
+### 3. Set your API key
 
-Create a `.env` file in the root directory and add your Google Gemini API key:
+Create a `.env` file with your Gemini API key:
 
 ```
 GOOGLE_API_KEY=your_google_gemini_api_key
 ```
 
-### 4. Run the App
+### 4. Run the app
 
 ```bash
 streamlit run app.py
@@ -72,54 +72,48 @@ streamlit run app.py
 ## 🧠 Powered By
 
 * [LangChain](https://www.langchain.com/)
-* [Google Gemini API](https://ai.google.dev/)
-* [Pydantic](https://docs.pydantic.dev/)
+* [Google Gemini](https://ai.google.dev/)
 * [Streamlit](https://streamlit.io/)
-* [Pillow (PIL)](https://python-pillow.org/)
+* [Pillow (PIL)](https://pillow.readthedocs.io/)
+* [Pydantic](https://docs.pydantic.dev/)
 
 ---
 
 ## 📌 Notes
 
-* Headlines are limited to **25 characters**.
-* Ad body text tries to stay **as close as possible** to the selected word limit.
-* Hashtags are limited to a **maximum of 3**, unless user disables them.
-* Empty fields are not guessed—output respects only what's provided.
+* **Headline** limited to **25 characters**
+* Ad **body text** adheres closely to the chosen word limit
+* Maximum **3 hashtags** if enabled
+* Fields left empty are **not guessed**; output skips non-essentials
 
 ---
 
 ## 📷 Example Output
 
-<img src="example_ad.png" alt="Generated Ad Example" width="500"/>
+> (Insert an ad preview screenshot here after running the app)
 
 ---
 
-## 🛠️ Future Improvements
+## 🛠️ Future Roadmap
 
-* 🔧 Add multi-ad generation with variations
-* 🧾 Export ads as PDF flyers or social-ready post kits
-* 🧠 User account login for saving campaigns
-* 🌐 API wrapper for external use
+* Support **multiple ad variants**
+* Export ads as **PDF/social kits**
+* Enable **LLM model switching**
+* **User account** features and campaign saving
 
 ---
 
-## 🧑‍💻 Developed By
+## 👨‍💻 Developed By
 
 **Umang**
-Passionate about Generative AI, UI/UX, and real-world product building.
+Passionate about Generative AI, product design, and intuitive user experiences.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-
-```
+MIT License
 
 ---
 
-Let me know if you want to:
-- Add screenshots or deploy it on Streamlit Cloud
-- Support more export formats like PDF
-- Enable LLM selection between Gemini/ChatGPT, etc.
-```
+Let me know if you'd like a version with live demo links, badges, or GitHub Actions integration.
