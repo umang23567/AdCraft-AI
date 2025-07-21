@@ -10,7 +10,7 @@ You can either:
 
 - 🔧 **Run locally** using the setup instructions below  
 **OR**
-- 🌐 **Try the live app here** → [🔗 Beta Version]([https://your-app-url.streamlit.app](https://umang23567-adcraft-ai-app-8js2fl.streamlit.app))
+- 🌐 **Try the live app here** → [🔗 adcraft-ai.streamlit.app]([https://your-app-url.streamlit.app](https://umang23567-adcraft-ai-app-8js2fl.streamlit.app))
 > ⚠️ Note: The app is in development. Some features may not work as expected.
 
 
