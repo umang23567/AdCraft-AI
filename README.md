@@ -109,10 +109,14 @@ streamlit run app.py
 -  **Limited Background Suitability**  
   The available solid/gradient/image background options may not be visually optimal for every ad scenario.
 
+- **Minimal Error Handling**  
+  Although the code is generally robust, detailed error handling hasn't been implemented.
+  In rare cases, unexpected inputs or failures (e.g., LLM/API/image issues) may cause errors.
+
 ---
 
 
-## 🛤️  Future Roadmap
+## 🚀 Expansion Ideas
 
 * Support multiple ad variants generation (A/B testing)
 * Export ads as PDF or ready-to-post social media kits
