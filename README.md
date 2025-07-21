@@ -1,10 +1,6 @@
-Sure! Here's the direct markdown-formatted text for your `README.md` file:
-
----
-
 # 🖼️ AdCraft AI
 
-**AdCraft AI** is a Streamlit-powered application that allows users to generate visually stunning, personalized **social media advertisements** with the help of **Google Gemini (via LangChain)** and overlay the generated content onto custom-styled image backgrounds.
+**AdCraft AI** is a Streamlit-powered application that allows users to generate personalized **social media ad postss** with the help of **Google Gemini (via LangChain)** and overlay the generated content onto custom-styled image backgrounds.
 
 ---
 
@@ -31,8 +27,10 @@ adcraft-ai/
 ├── .env                  # Google Gemini API key (not shared)
 ├── fonts/                # Font files
 │   ├── Anton-Regular.ttf
+│   ├── LibreBaskerville-Regular.ttf
+│   ├── Montserrat-Italic-VariableFont_wght.ttf
+│   ├── OpenSans-VariableFont_wdth,wght.ttf
 │   ├── Pacifico-Regular.ttf
-│   └── ...
 └── requirements.txt      # Python dependencies
 ```
 
@@ -79,15 +77,6 @@ streamlit run app.py
 
 ---
 
-## 📌 Notes
-
-* **Headline** limited to **25 characters**
-* Ad **body text** adheres closely to the chosen word limit
-* Maximum **3 hashtags** if enabled
-* Fields left empty are **not guessed**; output skips non-essentials
-
----
-
 ## 📷 Example Output
 
 > (Insert an ad preview screenshot here after running the app)
@@ -106,14 +95,9 @@ streamlit run app.py
 ## 👨‍💻 Developed By
 
 **Umang**
-Passionate about Generative AI, product design, and intuitive user experiences.
+Passionate about Generative AI, product design and UI/UX.
 
 ---
 
-## 📄 License
 
-MIT License
 
----
-
-Let me know if you'd like a version with live demo links, badges, or GitHub Actions integration.
