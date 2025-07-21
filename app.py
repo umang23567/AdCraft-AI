@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_tags import st_tags
 
-from ad_chain import generate_ad, load_api_key
+from ad_chain import generate_ad
 from image_gen import overlay_txt, gen_grad_bg, gen_solid_bg, process_bg
 
 import io
