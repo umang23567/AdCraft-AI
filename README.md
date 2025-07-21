@@ -131,8 +131,7 @@ streamlit run app.py
 ## 🚀 Expansion Ideas
 
 * Support multiple ad variants generation (A/B testing)
-* Export ads as PDF or ready-to-post social media kits
-* Allow users to switch LLMs (e.g. Gemini, GPT-4, Claude)
+* Prompt tuning and refinement to generate more relevant and high-converting ad content.
 * Add user accounts and campaign saving features
 * Integrate AI image generation using LLM prompts to generate custom ad background images
 * Add image templates for different social platforms (Instagram, LinkedIn, etc.)
