@@ -83,9 +83,24 @@ streamlit run app.py
 
 ---
 
+## 🛠️ Development Steps
+
+1. **LLM Integration**  
+   Used LangChain with Google Gemini and crafted prompts for high-quality ad generation.
+
+2. **JSON Parsing**  
+   Parsed structured LLM output using Pydantic models.
+
+3. **Streamlit UI**  
+   Built a user-friendly form to collect inputs and styling preferences.
+
+4. **Image Rendering**  
+   Generated styled backgrounds and overlayed the ad text using PIL.
+---
+
 ## 🛠️ Current issues
 
-* Clear/Reser does not reset the form fields
+* Clear/Reset does not reset the form fields
 
 ---
 
