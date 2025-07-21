@@ -1,2 +1,8 @@
-langchain[google-genai]
+streamlit
+streamlit-tags
+pillow
+numpy
 python-dotenv
+pydantic
+langchain
+langchain-google-genai
