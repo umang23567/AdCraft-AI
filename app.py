@@ -5,6 +5,7 @@ from ad_chain import generate_ad
 from image_gen import overlay_txt, gen_grad_bg, gen_solid_bg, process_bg
 
 import io
+import os
 
 import hashlib
 import io
