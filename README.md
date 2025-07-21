@@ -83,12 +83,21 @@ streamlit run app.py
 
 ---
 
+## 🛠️ Current issues
+
+* Clear/Reser does not reset the form fields
+
+---
+
+
 ## 🛠️ Future Roadmap
 
-* Support **multiple ad variants**
-* Export ads as **PDF/social kits**
-* Enable **LLM model switching**
-* **User account** features and campaign saving
+🧠 Support multiple ad variants generation (A/B testing)
+🧾 Export ads as PDF or ready-to-post social media kits
+🔄 Allow users to switch LLMs (e.g. Gemini, GPT-4, Claude)
+🔐 Add user accounts and campaign saving features
+🖼️ Integrate AI image generation using LLM prompts to generate custom ad background images
+🎯 Add image templates for different social platforms (Instagram, LinkedIn, etc.)
 
 ---
 
