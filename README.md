@@ -91,7 +91,7 @@ streamlit run app.py
 
 ## 📷 Example Output
 
-> (Insert an ad preview screenshot here after running the app)
+> ![App Banner](./assets/Example Output.png)
 
 ---
 
