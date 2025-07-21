@@ -98,7 +98,7 @@ streamlit run app.py
 
 ## 📷 Example Output
 
-> ![App Banner](./assets/Example-Output.png)
+> ![App Banner](./assets/ex.jpg)
 
 ---
 
