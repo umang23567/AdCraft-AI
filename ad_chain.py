@@ -25,9 +25,11 @@ class SocialMediaAd(BaseModel):
 
 # Load API Key
 def load_api_key():
-    load_dotenv()       # Load api from .env
-    if not os.environ.get("GOOGLE_API_KEY"):
-        os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter API key for Google Gemini: ")
+    # load_dotenv()       # Load api from .env
+    # if not os.environ.get("GOOGLE_API_KEY"):
+    #     os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter API key for Google Gemini: ")
+    api_key = st.secrets["GOOGLE_API_KEY"]
+    os.environ["GOOGLE_API_KEY"] = api_key
 
 # Load examples (few shots)
 def load_few_shot_examples(file_path="examples.json"):
