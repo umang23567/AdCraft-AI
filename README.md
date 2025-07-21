@@ -91,7 +91,7 @@ streamlit run app.py
 
 ## 📷 Example Output
 
-> ![App Banner](./assets/Example Output.png)
+> ![App Banner](./assets/Example-Output.png)
 
 ---
 
@@ -143,8 +143,6 @@ streamlit run app.py
 **Umang**
 Passionate about Generative AI, product design and UI/UX.
 
----
-🚧
 
 
 
