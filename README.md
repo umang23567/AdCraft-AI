@@ -2,7 +2,17 @@
 
 **AdCraft AI** is a Streamlit-powered application that allows users to generate personalized **social media ad postss** with the help of **Google Gemini (via LangChain)** and overlay the generated content onto custom-styled image backgrounds.
 
- 🚧 **Note:** This app is a work in progress. Some features may be limited or unstable.
+---
+
+## ⚡ Try it out
+
+You can either:
+
+- 🔧 **Run locally** using the setup instructions below  
+**OR**
+- 🌐 **Try the live app here** → [🔗 Deployed Version](https://your-app-url.streamlit.app)
+> ⚠️ Note: The app is in development. Some features may not work as expected.
+
 
 ---
 
