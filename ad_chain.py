@@ -24,13 +24,11 @@ class SocialMediaAd(BaseModel):
     email: str= Field(description="Email of the company/brand publishing the ad")
     website: str= Field(description="Website of the company/brand publishing the ad")
 
-# Load API Key
-def load_api_key():
-    # load_dotenv()       # Load api from .env
-    # if not os.environ.get("GOOGLE_API_KEY"):
-    #     os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter API key for Google Gemini: ")
-    api_key = st.secrets["GOOGLE_API_KEY"]
-    os.environ["GOOGLE_API_KEY"] = api_key
+# # Load API Key
+# def load_api_key():
+#     load_dotenv()       # Load api from .env
+#     if not os.environ.get("GOOGLE_API_KEY"):
+#         os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter API key for Google Gemini: ")
 
 # Load examples (few shots)
 def load_few_shot_examples(file_path="examples.json"):
