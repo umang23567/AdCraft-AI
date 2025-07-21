@@ -10,7 +10,8 @@ import hashlib
 import io
 import json
 
-load_api_key()
+api_key = st.secrets["GOOGLE_API_KEY"]
+os.environ["GOOGLE_API_KEY"] = api_key
 
 st.set_page_config(layout="wide")
 
