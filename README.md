@@ -73,8 +73,7 @@ mkdir -p .streamlit
 ```bash
 nano .streamlit/secrets.toml
 ```
-* Add your Gemini API key to the file
-Paste the following into secrets.toml:
+* Add your Gemini API key to the secrets.toml file
 ```bash
 GOOGLE_API_KEY=your_google_gemini_api_key
 ```
