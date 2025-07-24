@@ -18,12 +18,12 @@ You can either:
 
 ## ✨ Features
 
-* AI-Powered Ad Generation** using Google Gemini via LangChain
-* Customizable Ad Styling** (Fonts, Colors, Gradient/Solid/Image Backgrounds)
-* Structured JSON Output** using Pydantic models
-* Text Overlay Rendering** for headlines, body, CTA, hashtags, and contact info
-* Downloadable Image Ad**
-* Session-Aware Interface** with auto-reset on form changes
+* **AI-Powered Ad Generation** using Google Gemini via LangChain
+* **Customizable Ad Styling** (Fonts, Colors, Gradient/Solid/Image Backgrounds)
+* **Structured JSON Output** using Pydantic models
+* **Text Overlay Rendering** for headlines, body, CTA, hashtags, and contact info
+* **Downloadable Image Ad**
+* **Session-Aware Interface** with auto-reset on form changes
 
 ---
 
