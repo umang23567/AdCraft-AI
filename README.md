@@ -1,6 +1,6 @@
 # 🖼️ AdCraft AI
 
-**AdCraft AI** is a Streamlit-powered application that allows users to generate personalized **social media ad postss** with the help of **Google Gemini (via LangChain)** and overlay the generated content onto custom-styled image backgrounds.
+**AdCraft AI** is a Streamlit-powered application that allows users to generate personalized **social media ad postss** with the help of **Google Gemini (via LangChain)** and overlay the generated content onto custom-styled image backgrounds (created using PIL).
 
 ---
 
