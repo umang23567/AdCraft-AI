@@ -148,6 +148,7 @@ streamlit run app.py
 ## 👨‍💻 Developed By
 
 **Umang**
+
 Passionate about Generative AI, product design and UI/UX.
 
 
